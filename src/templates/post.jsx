@@ -29,6 +29,28 @@ export default function PostTemplate({ data, pageContext }) {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div class="single post-outer-container">
           <h1>{post.title}</h1>
+          
+          <div class="post-meta">
+			<div class="post-meta-inner">
+				<div class="post-author vcard">
+					<span class="by">By</span>
+				
+				
+				<span itemprop="name">
+				{post.author}
+</span>
+
+</div>
+<div class="post-date">
+<span class="dot"></span>
+{post.date}
+</div>
+<div class="post-comments">
+3 comments
+</div>
+</div>
+</div>
+
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
@@ -54,8 +76,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         cover
-        date
+        date(formatString: "MMMM DD, YYYY")
         category
+        author
         tags
         image: featured {
           childImageSharp {
