@@ -11,7 +11,16 @@ a{
 	text-decoration: none;
 }
 
-
+.row {
+    display: -ms-flexbox;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
 footer p {
   color: #fff;
 }

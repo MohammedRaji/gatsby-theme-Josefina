@@ -38,15 +38,16 @@ function Listing({ pageContext, data }) {
 
   return (
     <Layout>
-      <div className="main-content container">
+      
       
         <div className="main col-lg-8">
           <Helmet title={config.siteTitle} />
           <SEO />
           <PostListing postEdges={postEdges} />
+          {renderPaging()}
         </div>
-        {renderPaging()}
-      </div>
+        
+      
     </Layout>
   );
 }
