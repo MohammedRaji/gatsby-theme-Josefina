@@ -16,7 +16,7 @@ query {
 }
 `
 
-function MainMenu() {
+function Tag() {
 	const data = useStaticQuery(query)
   console.log(data);
 
