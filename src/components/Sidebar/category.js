@@ -25,7 +25,7 @@ const arr =[];
   //console.log(edge.node.frontmatter.category)
   arr.push(edge.node.frontmatter.category)
   ))
-console.log(arr)
+
 //const arr = [2, 2, 2, 2, 2, 4, 5, 5, 5, 9];
 const result = arr.reduce((acc, curr) => {
   acc[curr] ??= {[curr]: 0};
@@ -34,27 +34,28 @@ const result = arr.reduce((acc, curr) => {
   return acc;
 }, {});
 
+console.log(Object.values(result))
 
-
+//console.log(Object.keys(result))
+//console.log(Object.entries(result))
   return (
     
 
 		<>
-            <ul>
+      
               
               
               
               
-  //console.log(Object.values(result).length)
- {Object.keys(result).map((keyName, i) => (
-    <li className="travelcompany-input" key={i}>
-        <span className="input-label">key: {i} Name: {result[keyName]}</span>
-    </li>
-))}
-              
+  {/*Object.entries(result).map(([key, val], i) => (
+    <p key={i}>
+        {key}: {val}
+    </p>
+))*/}
 
+{Object.values(result).map(home => <div>{Object.keys(home)} :{Object.values(home)}</div>)}
               
-            </ul>
+            
           </>
 
   	)

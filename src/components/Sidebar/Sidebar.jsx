@@ -1,8 +1,9 @@
 import React from "react"
-import Tag from "./tag"
-import Category from "./category"
+
+import Category from './category'
+import Tag from './tag'
 import SocialLinks from "./sociallinks";
-import {Logo} from "./logo"
+import Bio from "./bio"
 
 export default function Header() {
 	
@@ -12,9 +13,9 @@ export default function Header() {
 <h3 class="title">
 About me
 </h3>
-<Tag/>
 <Category/>
-
+<Tag/>
+<Bio/>
 </aside>
   	)
 }

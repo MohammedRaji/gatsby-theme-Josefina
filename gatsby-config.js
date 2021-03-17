@@ -11,6 +11,8 @@ module.exports = {
       
    
   siteMetadata: {
+  authorname:'MONIKA SPECTOR',
+  authordes:'Hi, i am glad you made it here to know more about me. I am a Lifestyle blogger. Him fowl divided. Lesser which fruitful image, first seas have the, seas grass image ',
   social:[{
          name:'facebook',
          link:'https://twitter.com/_umusi'

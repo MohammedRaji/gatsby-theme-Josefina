@@ -4,6 +4,7 @@ import config from "../../data/SiteConfig";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Sidebar from "../components/Sidebar/Sidebar";
+import CarouselPage from "../components/Slider/Slider";
 //import config from "../../data/SiteConfig";
 import "./index.css";
 
@@ -15,6 +16,7 @@ export default function MainLayout({ children }) {
         <html lang="en" />
       </Helmet>
       <Header/>
+      <CarouselPage/>
       <div className="main-content container">
       <div className ="row">
       {children}
