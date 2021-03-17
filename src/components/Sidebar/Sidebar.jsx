@@ -1,5 +1,6 @@
 import React from "react"
 import Tag from "./tag"
+import Category from "./category"
 import SocialLinks from "./sociallinks";
 import {Logo} from "./logo"
 
@@ -11,6 +12,8 @@ export default function Header() {
 <h3 class="title">
 About me
 </h3>
+<Tag/>
+<Category/>
 
 </aside>
   	)

@@ -5,25 +5,27 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const query = graphql`
 query {
-  MainMenu:site{
-    siteMetadata{
-      menuLinks {
-         name
-         link
-            }
-    }
+  tags:allMarkdownRemark{
+		edges{
+			node{
+				frontmatter{
+					tags
+				}
+			}
+		}
   }
 }
 `
 
 function Tag() {
 	const data = useStaticQuery(query)
-  console.log(data);
+	let tags
+  console.table(data.tags.edges[0]);
 
   return (
     
 
-		<nav className="container main-menu nav-primary d-none d-md-block sticky" id="main-menu">
+		<>
             <ul>
               {/*data.MainMenu.siteMetadata.menuLinks.map(link => (
                 <li
@@ -37,8 +39,8 @@ function Tag() {
                   </Link>
                 </li>
               ))*/}
-            </ul>}
-          </nav>
+            </ul>
+          </>
 
   	)
 }
