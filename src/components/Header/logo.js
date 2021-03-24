@@ -38,9 +38,9 @@ function Logo() {
     )
 }
 
-function LogoFooter() {
+function LogoFooter({pageContext}) {
   const data = useStaticQuery(query);
-  //console.log(data);
+  console.log(pageContext);
 
 
   return (
