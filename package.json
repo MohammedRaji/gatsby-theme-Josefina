@@ -38,6 +38,7 @@
     "react-helmet": "^6.1.0",
     "react-share": "^4.4.0",
     "react-slick": "^0.28.1",
+    "react-modal":"^3.12.1"
     "react-twitter-widgets": "^1.9.5",
     "slick-carousel": "^1.8.1",
     "swiper": "^6.5.0",
