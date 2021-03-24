@@ -17,7 +17,6 @@ query {
   }
 }
 `
-console.log(styles)
 function Tag() {
 	const data = useStaticQuery(query)
   let edges = data.allMarkdownRemark.edges;
