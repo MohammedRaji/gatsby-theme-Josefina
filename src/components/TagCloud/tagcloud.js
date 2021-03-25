@@ -18,10 +18,7 @@ query {
   }
 }
 `
-<<<<<<< HEAD
 
-=======
->>>>>>> 5d45d557c7c236767418fd6c3bcbdfac22cb5ba2
 function Tag() {
 	const data = useStaticQuery(query)
   let edges = data.allMarkdownRemark.edges;
