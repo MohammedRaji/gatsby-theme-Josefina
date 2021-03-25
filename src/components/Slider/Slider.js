@@ -2,14 +2,17 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Img from "gatsby-image"
+import "./slider.css";
 
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 
+
+
 const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     autoplay: false,
@@ -67,7 +70,7 @@ const data = useStaticQuery(graphql`
 console.log(data.posts.edges)
 
   return (
-    <Slider style={{ height: "100px" }} {...settings} className="overflow-hidden">
+    <Slider style={{ height: "540px" }} {...settings} className="overflow-hidden">
       {/*<Img fluid={data.image1.childImageSharp.fluid} />
       <Img fluid={data.image2.childImageSharp.fluid} />*/}
       {/*slidesData.map((slide) =>
@@ -83,15 +86,28 @@ console.log(data.posts.edges)
 
             <div className="slick-slide" key={1}>
               {edge.node.frontmatter.featured ? (
-    		<div className="item-img">
-      			<img src={edge.node.frontmatter.featured.childImageSharp.fluid.src} alt="Logo" />
-    		</div>
+    		
+    		
+    		
+    		<div class="image-container">
+    <img src={edge.node.frontmatter.featured.childImageSharp.fluid.src} alt="logo"/>
+    <div className="slick-slide-label">{edge.node.frontmatter.title}</div>
+</div>
+    		
+    		
+    		
+    		
       	) : (
-    		<div className="item-img">
-      			<img src="https://via.placeholder.com/150" alt="Logo" />
-    		</div>
+    		
+    		
+    		
+    		<div className="image-container">
+    <img src="https://via.placeholder.com/150" alt="Logo" />
+    <div className="slick-slide-label">{edge.node.frontmatter.title}</div>
+</div>
+
       	)}
-              <label className="slick-slide-label">{edge.node.frontmatter.title}</label>
+              
             </div>
 
           )}
